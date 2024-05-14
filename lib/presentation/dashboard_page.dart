@@ -2,7 +2,7 @@
 
 import 'package:flutter/material.dart';
 
-import '../../../shared/theme.dart';
+import '../shared/theme.dart';
 import 'home_page.dart';
 
 class DashboardPage extends StatefulWidget {

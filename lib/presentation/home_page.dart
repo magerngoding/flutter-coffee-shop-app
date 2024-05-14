@@ -1,16 +1,17 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first, prefer_const_literals_to_create_immutables
 // ignore_for_file: camel_case_types, prefer_typing_uninitialized_variables, prefer_const_constructors
 
-import 'package:coffee_shop_app/presentation/home/pages/beans_detail_page.dart';
-import 'package:coffee_shop_app/presentation/home/pages/coffee_detail_page.dart';
-import 'package:coffee_shop_app/presentation/home/widgets/beans_widget.dart';
+import 'package:coffee_shop_app/presentation/beans_detail_page.dart';
+import 'package:coffee_shop_app/presentation/coffee_detail_page.dart';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
 import 'package:coffee_shop_app/shared/theme.dart';
 
-import '../widgets/coffee_widget.dart';
+import 'widgets/beans_widget.dart';
+import 'widgets/coffee_widget.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);

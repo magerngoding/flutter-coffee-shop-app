@@ -7,10 +7,10 @@ import 'package:flutter/widgets.dart';
 
 import 'package:coffee_shop_app/shared/theme.dart';
 
-import '../widgets/size_gram_widget.dart';
+import 'widgets/size_widget.dart';
 
-class BeansDetailPage extends StatelessWidget {
-  const BeansDetailPage({Key? key}) : super(key: key);
+class CoffeeDetailPage extends StatelessWidget {
+  const CoffeeDetailPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +22,7 @@ class BeansDetailPage extends StatelessWidget {
             Stack(
               children: <Widget>[
                 Image.asset(
-                  'assets/img_robusta_detail.png',
+                  'assets/img_coffee_detail.png',
                 ),
                 Container(
                   margin: const EdgeInsets.symmetric(
@@ -93,14 +93,14 @@ class BeansDetailPage extends StatelessWidget {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text(
-                              "Robusta Beans",
+                              "Cappuccino",
                               style: whiteTextStyle.copyWith(
                                 fontSize: 20.0,
                                 fontWeight: semiBold,
                               ),
                             ),
                             Text(
-                              "From Africa",
+                              "With Streamed Milk",
                               style: grayAETextStyle.copyWith(
                                 fontSize: 12.0,
                               ),
@@ -157,7 +157,7 @@ class BeansDetailPage extends StatelessWidget {
                                     children: [
                                       Center(
                                         child: Image.asset(
-                                          "assets/icon_bean.png",
+                                          "assets/icon_coffee.png",
                                           width: 31.0,
                                           height: 31.0,
                                         ),
@@ -189,7 +189,7 @@ class BeansDetailPage extends StatelessWidget {
                                     children: [
                                       Center(
                                         child: Image.asset(
-                                          "assets/icon_location.png",
+                                          "assets/icon_milk.png",
                                           width: 25.0,
                                           height: 31.0,
                                         ),
@@ -257,7 +257,7 @@ class BeansDetailPage extends StatelessWidget {
                     height: 15.0,
                   ),
                   Text(
-                    "Arabica beans are by far the most popular type of coffee beans, making up about 60% of the world’s coffee. These tasty beans originated many centuries ago in the highlands of Ethiopia, and may even be the first coffee beans ever consumed! ",
+                    "Cappuccino is a latte made with more foam than steamed milk, often with a sprinkle of cocoa powder or cinnamon on top.",
                     style: whiteTextStyle.copyWith(
                       fontSize: 14.0,
                     ),
@@ -278,17 +278,13 @@ class BeansDetailPage extends StatelessWidget {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
-                      SizeGramWidget(
+                      SizeWidget(
+                        size: 'S',
                         isActve: true,
-                        gram: 250,
                         isColor: true,
                       ),
-                      SizeGramWidget(
-                        gram: 500,
-                      ),
-                      SizeGramWidget(
-                        gram: 1000,
-                      ),
+                      SizeWidget(size: 'M'),
+                      SizeWidget(size: 'L'),
                     ],
                   ),
                   const SizedBox(
@@ -319,7 +315,7 @@ class BeansDetailPage extends StatelessWidget {
                               ),
                               children: <TextSpan>[
                                 TextSpan(
-                                  text: '10.50',
+                                  text: '4.20',
                                   style: whiteTextStyle.copyWith(
                                     fontSize: 15.0,
                                     fontWeight: semiBold,
