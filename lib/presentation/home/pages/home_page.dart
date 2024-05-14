@@ -1,6 +1,8 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first, prefer_const_literals_to_create_immutables
 // ignore_for_file: camel_case_types, prefer_typing_uninitialized_variables, prefer_const_constructors
 
+import 'package:coffee_shop_app/presentation/home/pages/beans_detail_page.dart';
+import 'package:coffee_shop_app/presentation/home/pages/coffee_detail_page.dart';
 import 'package:coffee_shop_app/presentation/home/widgets/beans_widget.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -142,36 +144,46 @@ class HomePage extends StatelessWidget {
                 ),
                 SingleChildScrollView(
                   scrollDirection: Axis.horizontal,
-                  child: Row(
-                    children: [
-                      CoffeeWidget(
-                        image: 'assets/img_coffee_1.png',
-                        name: 'Cappuccino',
-                        description: 'With Steamed Milk',
-                        price: 4.20,
-                        rating: '4.5',
-                      ),
-                      const SizedBox(
-                        width: 22.0,
-                      ),
-                      CoffeeWidget(
-                        image: 'assets/img_coffee_2.png',
-                        name: 'Cappuccino',
-                        description: 'With Foam',
-                        price: 4.20,
-                        rating: '4.2',
-                      ),
-                      const SizedBox(
-                        width: 22.0,
-                      ),
-                      CoffeeWidget(
-                        image: 'assets/img_coffee_1.png',
-                        name: 'Cappuccino',
-                        description: 'With Steamed Milk',
-                        price: 4.20,
-                        rating: '4.5',
-                      ),
-                    ],
+                  child: InkWell(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => CoffeeDetailPage(),
+                        ),
+                      );
+                    },
+                    child: Row(
+                      children: [
+                        CoffeeWidget(
+                          image: 'assets/img_coffee_1.png',
+                          name: 'Cappuccino',
+                          description: 'With Steamed Milk',
+                          price: 4.20,
+                          rating: '4.5',
+                        ),
+                        const SizedBox(
+                          width: 22.0,
+                        ),
+                        CoffeeWidget(
+                          image: 'assets/img_coffee_2.png',
+                          name: 'Cappuccino',
+                          description: 'With Foam',
+                          price: 4.20,
+                          rating: '4.2',
+                        ),
+                        const SizedBox(
+                          width: 22.0,
+                        ),
+                        CoffeeWidget(
+                          image: 'assets/img_coffee_1.png',
+                          name: 'Cappuccino',
+                          description: 'With Steamed Milk',
+                          price: 4.20,
+                          rating: '4.5',
+                        ),
+                      ],
+                    ),
                   ),
                 ),
                 const SizedBox(
@@ -189,33 +201,43 @@ class HomePage extends StatelessWidget {
                 ),
                 SingleChildScrollView(
                   scrollDirection: Axis.horizontal,
-                  child: Row(
-                    children: [
-                      BeansWidget(
-                        image: 'assets/img_bean_robusta.png',
-                        name: 'Robusta Beans',
-                        description: 'Medium Roasted',
-                        price: 4.20,
-                      ),
-                      const SizedBox(
-                        width: 22.0,
-                      ),
-                      BeansWidget(
-                        image: 'assets/img_bean_cappucino.png',
-                        name: 'Cappuccino',
-                        description: 'With Steamed Milk',
-                        price: 4.20,
-                      ),
-                      const SizedBox(
-                        width: 22.0,
-                      ),
-                      BeansWidget(
-                        image: 'assets/img_bean_robusta.png',
-                        name: 'Robusta Beans',
-                        description: 'Medium Roasted',
-                        price: 4.20,
-                      ),
-                    ],
+                  child: InkWell(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => BeansDetailPage(),
+                        ),
+                      );
+                    },
+                    child: Row(
+                      children: [
+                        BeansWidget(
+                          image: 'assets/img_bean_robusta.png',
+                          name: 'Robusta Beans',
+                          description: 'Medium Roasted',
+                          price: 4.20,
+                        ),
+                        const SizedBox(
+                          width: 22.0,
+                        ),
+                        BeansWidget(
+                          image: 'assets/img_bean_cappucino.png',
+                          name: 'Cappuccino',
+                          description: 'With Steamed Milk',
+                          price: 4.20,
+                        ),
+                        const SizedBox(
+                          width: 22.0,
+                        ),
+                        BeansWidget(
+                          image: 'assets/img_bean_robusta.png',
+                          name: 'Robusta Beans',
+                          description: 'Medium Roasted',
+                          price: 4.20,
+                        ),
+                      ],
+                    ),
                   ),
                 ),
                 const SizedBox(

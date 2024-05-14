@@ -7,8 +7,10 @@ import 'package:flutter/widgets.dart';
 
 import 'package:coffee_shop_app/shared/theme.dart';
 
-class BeanDetailPage extends StatelessWidget {
-  const BeanDetailPage({Key? key}) : super(key: key);
+import '../widgets/size_gram_widget.dart';
+
+class BeansDetailPage extends StatelessWidget {
+  const BeansDetailPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -39,11 +41,16 @@ class BeanDetailPage extends StatelessWidget {
                           ),
                           color: Color(0xff21262E),
                         ),
-                        child: Center(
-                          child: Image.asset(
-                            "assets/icon_arrow_back.png",
-                            width: 20,
-                            height: 20,
+                        child: InkWell(
+                          onTap: () {
+                            Navigator.pop(context);
+                          },
+                          child: Center(
+                            child: Image.asset(
+                              "assets/icon_arrow_back.png",
+                              width: 20,
+                              height: 20,
+                            ),
                           ),
                         ),
                       ),
@@ -357,52 +364,6 @@ class BeanDetailPage extends StatelessWidget {
               height: 50.0,
             ),
           ],
-        ),
-      ),
-    );
-  }
-}
-
-class SizeGramWidget extends StatelessWidget {
-  final bool isActve;
-  final bool isColor;
-  final int gram;
-  const SizeGramWidget({
-    Key? key,
-    this.isActve = false,
-    this.isColor = false,
-    required this.gram,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      height: 40.0,
-      width: 100,
-      decoration: BoxDecoration(
-        color: Color(0xff141921),
-        border: Border.all(
-          width: 1.0,
-          color: isActve ? brownColor : Color(0xff141921),
-        ),
-        borderRadius: BorderRadius.all(
-          Radius.circular(
-            10.0,
-          ),
-        ),
-      ),
-      child: Center(
-        child: Text(
-          ' ${gram.toString()}gm',
-          style: isColor
-              ? brownTextStyle.copyWith(
-                  fontSize: 12.0,
-                  fontWeight: medium,
-                )
-              : grayAETextStyle.copyWith(
-                  fontSize: 12.0,
-                  fontWeight: medium,
-                ),
         ),
       ),
     );
