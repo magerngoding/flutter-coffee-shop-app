@@ -9,6 +9,7 @@ Color gray52Color = Color(0xff52555A);
 Color gray25Color = Color(0xff252A32);
 Color grayAEColor = Color(0xffAEAEAE);
 Color brownColor = Color(0xffD17842);
+Color black0CColor = Color(0xff0C0F14);
 
 TextStyle primaryTextStyle = GoogleFonts.poppins(
   color: primaryColor,

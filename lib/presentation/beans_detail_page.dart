@@ -7,6 +7,7 @@ import 'package:flutter/widgets.dart';
 
 import 'package:coffee_shop_app/shared/theme.dart';
 
+import 'widgets/custome_price_and_button.dart';
 import 'widgets/size_gram_widget.dart';
 
 class BeansDetailPage extends StatelessWidget {
@@ -294,68 +295,10 @@ class BeansDetailPage extends StatelessWidget {
                   const SizedBox(
                     height: 28.0,
                   ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Column(
-                        children: [
-                          Text(
-                            "Price",
-                            style: grayAETextStyle.copyWith(
-                              fontWeight: medium,
-                              fontSize: 12.0,
-                            ),
-                          ),
-                          const SizedBox(
-                            height: 3.0,
-                          ),
-                          RichText(
-                            textAlign: TextAlign.center,
-                            text: TextSpan(
-                              text: '\$ ',
-                              style: brownTextStyle.copyWith(
-                                fontSize: 15,
-                                fontWeight: semiBold,
-                              ),
-                              children: <TextSpan>[
-                                TextSpan(
-                                  text: '10.50',
-                                  style: whiteTextStyle.copyWith(
-                                    fontSize: 15.0,
-                                    fontWeight: semiBold,
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                        ],
-                      ),
-                      Column(
-                        children: [
-                          Container(
-                            width: 240,
-                            height: 60.0,
-                            decoration: BoxDecoration(
-                              color: brownColor,
-                              borderRadius: BorderRadius.all(
-                                Radius.circular(
-                                  20.0,
-                                ),
-                              ),
-                            ),
-                            child: Center(
-                              child: Text(
-                                "Add to Cart",
-                                style: whiteTextStyle.copyWith(
-                                  fontSize: 16.0,
-                                  fontWeight: semiBold,
-                                ),
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
-                    ],
+                  CustomePriceAndButton(
+                    price: '8.50',
+                    name: 'Add to Cart',
+                    onTap: () {},
                   ),
                 ],
               ),

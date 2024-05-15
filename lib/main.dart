@@ -1,6 +1,6 @@
 // ignore_for_file: prefer_const_constructors
 
-import 'package:coffee_shop_app/presentation/home/pages/home_page.dart';
+import 'package:coffee_shop_app/presentation/dashboard_page.dart';
 import 'package:coffee_shop_app/shared/theme.dart';
 import 'package:flutter/material.dart';
 
@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         scaffoldBackgroundColor: backgroundColor,
       ),
-      home: HomePage(),
+      home: DashboardPage(),
     );
   }
 }

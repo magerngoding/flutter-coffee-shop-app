@@ -1,12 +1,14 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first, prefer_const_literals_to_create_immutables
 // ignore_for_file: camel_case_types, prefer_typing_uninitialized_variables, prefer_const_constructors
 
+import 'package:coffee_shop_app/presentation/cart_page.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
 import 'package:coffee_shop_app/shared/theme.dart';
 
+import 'widgets/custome_price_and_button.dart';
 import 'widgets/size_widget.dart';
 
 class CoffeeDetailPage extends StatelessWidget {
@@ -290,68 +292,17 @@ class CoffeeDetailPage extends StatelessWidget {
                   const SizedBox(
                     height: 28.0,
                   ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Column(
-                        children: [
-                          Text(
-                            "Price",
-                            style: grayAETextStyle.copyWith(
-                              fontWeight: medium,
-                              fontSize: 12.0,
-                            ),
-                          ),
-                          const SizedBox(
-                            height: 3.0,
-                          ),
-                          RichText(
-                            textAlign: TextAlign.center,
-                            text: TextSpan(
-                              text: '\$ ',
-                              style: brownTextStyle.copyWith(
-                                fontSize: 15,
-                                fontWeight: semiBold,
-                              ),
-                              children: <TextSpan>[
-                                TextSpan(
-                                  text: '4.20',
-                                  style: whiteTextStyle.copyWith(
-                                    fontSize: 15.0,
-                                    fontWeight: semiBold,
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                        ],
-                      ),
-                      Column(
-                        children: [
-                          Container(
-                            width: 240,
-                            height: 60.0,
-                            decoration: BoxDecoration(
-                              color: brownColor,
-                              borderRadius: BorderRadius.all(
-                                Radius.circular(
-                                  20.0,
-                                ),
-                              ),
-                            ),
-                            child: Center(
-                              child: Text(
-                                "Add to Cart",
-                                style: whiteTextStyle.copyWith(
-                                  fontSize: 16.0,
-                                  fontWeight: semiBold,
-                                ),
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
-                    ],
+                  CustomePriceAndButton(
+                    price: '8.50',
+                    name: 'Add to Cart',
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => CartPage(),
+                        ),
+                      );
+                    },
                   ),
                 ],
               ),
